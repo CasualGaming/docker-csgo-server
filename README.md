@@ -1,12 +1,6 @@
 ## Counter Strike Global Offensive + Docker
 
-CS:GO server in docker with 128 tick enabled by default.
-
-### Docker hub image
-
-```shell
-docker pull gonzih/csgo-server
-```
+CS:GO server in docker with 128 tick enabled by default. Competetive config based on Gamer.no's official config for Telenorligaen. All credit to gonzih/csgo-server for dockerized CS:GO-server.
 
 ### Details:
 By default image is build with enabled autoupdate feature (take a look at `csgo.sh` file).
@@ -14,7 +8,7 @@ You can create new Dockerfile based on that image (FROM csgo) and customize it w
 
 ```shell
 # Build image and tag it as csgo
-docker build -t csgo github.com/Gonzih/docker-csgo-server
+docker build -t csgo github.com/CasualGaming/docker-csgo-server
 
 # Run image with default options (CMD in Dockerfile)
 docker run -d -p 27015:27015 -p 27015:27015/udp csgo
